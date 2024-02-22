@@ -2,6 +2,10 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EducationAndTest", "EducationAndTest\EducationAndTest.csproj", "{30C42EAD-17B7-4463-B114-A52914F3BAC4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediatrExample", "MediatrExample\MediatrExample.csproj", "{B56BD6B0-6A54-41A5-B7A2-B13B8E9E494E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{BB610721-CB8C-4505-B899-D03ADB04D37A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +16,13 @@ Global
 		{30C42EAD-17B7-4463-B114-A52914F3BAC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{30C42EAD-17B7-4463-B114-A52914F3BAC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{30C42EAD-17B7-4463-B114-A52914F3BAC4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B56BD6B0-6A54-41A5-B7A2-B13B8E9E494E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B56BD6B0-6A54-41A5-B7A2-B13B8E9E494E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B56BD6B0-6A54-41A5-B7A2-B13B8E9E494E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B56BD6B0-6A54-41A5-B7A2-B13B8E9E494E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB610721-CB8C-4505-B899-D03ADB04D37A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB610721-CB8C-4505-B899-D03ADB04D37A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB610721-CB8C-4505-B899-D03ADB04D37A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB610721-CB8C-4505-B899-D03ADB04D37A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

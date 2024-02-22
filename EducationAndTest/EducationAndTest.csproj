@@ -17,4 +17,9 @@
       </Content>
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\MediatrExample\MediatrExample.csproj" />
+    </ItemGroup>
+
+
 </Project>
