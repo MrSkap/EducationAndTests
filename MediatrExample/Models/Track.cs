@@ -1,6 +1,6 @@
 namespace MediatrExample.Models;
 
-public class Track: Car
+public class Track : Car
 {
     public CarModelType Model { get; } = CarModelType.Track;
     public string Name { get; set; }

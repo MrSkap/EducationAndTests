@@ -8,10 +8,10 @@ namespace EducationAndTest.Controllers;
 
 [ApiController]
 [Route("cars")]
-public class CarsController:ControllerBase
+public class CarsController : ControllerBase
 {
-    private readonly ILogger _logger = Log.ForContext<CarsController>();
     private readonly ICarIdentifier _carIdentifier;
+    private readonly ILogger _logger = Log.ForContext<CarsController>();
 
     public CarsController(ICarIdentifier carIdentifier)
     {

@@ -12,13 +12,13 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Content Include="..\.dockerignore">
-        <Link>.dockerignore</Link>
-      </Content>
+        <Content Include="..\.dockerignore">
+            <Link>.dockerignore</Link>
+        </Content>
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\MediatrExample\MediatrExample.csproj" />
+        <ProjectReference Include="..\MediatrExample\MediatrExample.csproj"/>
     </ItemGroup>
 
 

@@ -1,6 +1,6 @@
 namespace MediatrExample.Models;
 
-public class Crossover:Car
+public class Crossover : Car
 {
     public CarModelType Model { get; set; } = CarModelType.Crossover;
     public string Name { get; set; }

@@ -1,4 +1,3 @@
-using System.Reflection;
 using MediatrExample.Services;
 using MediatrExample.Services.Pipelines;
 using Microsoft.Extensions.DependencyInjection;
