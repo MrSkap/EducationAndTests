@@ -9,15 +9,12 @@ public class DetectSportCarPipeline : IPipelineBehavior<CarIdentificationContext
     private readonly ILogger _logger = Log.ForContext<DetectCrossoverPipeline>();
     private const CarModelType Type = CarModelType.SportCar;
     
-    public Task<CarIdentificationResult> Handle(CarIdentificationContext request,
+    public async Task<CarIdentificationResult> Handle(CarIdentificationContext request,
         RequestHandlerDelegate<CarIdentificationResult> next, CancellationToken cancellationToken)
     {
-        if (request.Car.Model != Type)
-        {
-            return Task.FromResult(new CarIdentificationResult { Match = false });
-        }
+        if (request.Car.Model != Type) return await next();
         
         _logger.Information("{Car} is {Type}!", request.Car.Name, Type);
-        return Task.FromResult(new CarIdentificationResult { Match = true, Type = Type });
+        return new CarIdentificationResult { Match = true, Type = Type };
     }
 }
