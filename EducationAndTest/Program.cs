@@ -1,18 +1,29 @@
 using MediatrExample.Extensions;
+using Serilog;
+using Serilog.Events;
 
 var builder = WebApplication.CreateBuilder(args);
+builder.Host.ConfigureAppConfiguration((context, _) =>
+{
+    var level = context.HostingEnvironment.IsDevelopment() ? LogEventLevel.Debug : LogEventLevel.Information;
+    var logger = new LoggerConfiguration()
+        .WriteTo.Console(level, "{Timestamp:yyyy-MM-dd HH:mm:ss.fff} [{Level:u3}] {Message}{NewLine}{Exception}")
+        .CreateLogger();
+    Log.Logger = logger;
+});
+builder.Logging.ClearProviders();
+builder.Logging.AddConsole();
 
-// Add services to the container.
 
 builder.Services.AddControllers();
 builder.Services.AddMediatrExample();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
+app.Services.GetService<ILoggerFactory>()?.AddSerilog();
+
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();

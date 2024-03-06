@@ -10,8 +10,8 @@ namespace EducationAndTest.Controllers;
 [Route("cars")]
 public class CarsController : ControllerBase
 {
+    private static readonly ILogger Logger = Log.ForContext<CarsController>();
     private readonly ICarIdentifier _carIdentifier;
-    private readonly ILogger _logger = Log.ForContext<CarsController>();
 
     public CarsController(ICarIdentifier carIdentifier)
     {
@@ -21,7 +21,7 @@ public class CarsController : ControllerBase
     [HttpGet("statistics")]
     public async Task<CarsModelTypeStatisticResponse> GetCarsModelTypeStatistic(CarsModelTypeStatisticRequest request)
     {
-        _logger.Information("Analyze statistic of given cars...");
+        Logger.Information("Analyze statistic of given cars...");
         return new CarsModelTypeStatisticResponse(await _carIdentifier.IdentifyCars(request.Cars));
     }
 }
